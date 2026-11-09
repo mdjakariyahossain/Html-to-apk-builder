@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HTML to APK Builder</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="brand"><span class="logo">⚡</span><div><b>APK<span>FORGE</span></b><small>HTML TO ANDROID</small></div></div><span class="online"><i></i> ONLINE BUILDER</span></header>
+<main>
+<section class="hero"><div class="eyebrow">NO-CODE ANDROID PACKAGING</div><h1>Turn your <em>HTML</em><br>into an Android app.</h1><p>তোমার HTML প্রজেক্ট যোগ করো, অ্যাপের তথ্য দাও, তারপর GitHub Actions দিয়ে APK build করো।</p></section>
+<div class="layout">
+<section class="panel">
+<div class="panel-head"><div><span class="step">01</span><h2>Project source</h2></div><span class="tag">HTML / ZIP</span></div>
+<label class="drop" for="source"><span class="upload">↑</span><b>ফাইল নির্বাচন করো</b><small>একটি .html ফাইল অথবা index.html-সহ .zip</small><input id="source" type="file" accept=".html,.htm,.zip"></label>
+<div id="fileStatus" class="file-status">কোনো ফাইল নির্বাচন করা হয়নি</div>
+<label class="field-label" for="htmlCode">অথবা HTML কোড এখানে পেস্ট করো</label><textarea id="htmlCode" placeholder="<!doctype html>&#10;<html>&#10;  <body><h1>My App</h1></body>&#10;</html>"></textarea>
+</section>
+<section class="panel">
+<div class="panel-head"><div><span class="step">02</span><h2>App details</h2></div><span class="tag">ANDROID</span></div>
+<label class="field-label" for="appName">App name</label><input class="text-input" id="appName" maxlength="40" value="My HTML App" placeholder="My Awesome App">
+<label class="field-label" for="appId">Package name</label><input class="text-input" id="appId" value="com.example.myhtmlapp" placeholder="com.example.myapp">
+<small class="hint">শুধু ছোট হাতের অক্ষর, সংখ্যা ও ডট ব্যবহার করো। যেমন: com.yourname.myapp</small>
+<div class="notice"><b>ⓘ Build process</b><p>এই টুল একটি Android project ZIP বানাবে। ZIP-টি GitHub repository-তে upload করে Actions চালালে APK তৈরি হবে।</p></div>
+<button id="buildBtn" class="primary">Build project package <span>→</span></button>
+<div id="message" class="message" role="status"></div>
+</section>
+</div>
+<section class="steps"><h3>কীভাবে APK পাবে?</h3><div class="step-grid"><div><b>1</b><strong>Generate ZIP</strong><small>এই পেজ থেকে project package তৈরি করো।</small></div><div><b>2</b><strong>Upload to GitHub</strong><small>ZIP extract করে repository-তে সব ফাইল upload করো।</small></div><div><b>3</b><strong>Run workflow</strong><small>Actions → Build Android APK → Run workflow.</small></div><div><b>4</b><strong>Download APK</strong><small>Workflow artifact থেকে APK download করো।</small></div></div></section>
+<footer>APKFORGE · Built with HTML, CSS & JavaScript</footer>
+</main><script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script><script src="app.js"></script>
+</body></html>
